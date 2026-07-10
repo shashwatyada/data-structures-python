@@ -88,6 +88,22 @@ class LinkedList:
 
         self.head = prev # Update head to the new first node
 
+    # Method to find the middle of the linked list using fast and slow pointers
+    def find_middle(self):
+        slow = self.head
+        fast = self.head
+
+        if self.head is None:
+            print("The list is empty.")
+            return None
+
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+
+        print(f"The middle node's value is: {slow.data}")
+        return slow
+
 
 # ==========================================
 # STEP 3: RUN AND TEST OUR CODE
@@ -119,3 +135,6 @@ if __name__ == "__main__":
     my_list.reverse()
     print("\nList after reversing:")
     my_list.display()
+
+    middle_val = my_list.find_middle()
+    
