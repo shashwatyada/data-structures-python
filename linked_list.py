@@ -85,7 +85,8 @@ class LinkedList:
             current.next = prev     # Reverse the link
             prev = current         # Move prev and current one step forward
             current = next_node
-            self.head = prev # Update head to the new first node
+
+        self.head = prev # Update head to the new first node
 
 
 # ==========================================
