@@ -76,6 +76,17 @@ class LinkedList:
             current = current.next  # Move pointer to the next block
         print("None")  # This shows the end of the chain
 
+    # Method to reverse the linked list in place
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current is not None:
+            next_node = current.next # Store the next node
+            current.next = prev     # Reverse the link
+            prev = current         # Move prev and current one step forward
+            current = next_node
+            self.head = prev # Update head to the new first node
+
 
 # ==========================================
 # STEP 3: RUN AND TEST OUR CODE
@@ -102,4 +113,8 @@ if __name__ == "__main__":
     my_list.delete_node(20)
 
     print("\nList after deleting 20:")
+    my_list.display()
+
+    my_list.reverse()
+    print("\nList after reversing:")
     my_list.display()
