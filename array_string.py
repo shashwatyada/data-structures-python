@@ -18,7 +18,7 @@ def string_demo():
     print("Reverse String : ", reversed_text)
 
     # Built-in Method
-    print(" Upper Case :", text.upper() , " || Lower Case :", text.lower())
+    print(" Upper Case :", text.upper() , " || Lower Case :", text.lower(), len(text))
 
 
 # Array (List) Operations
